@@ -6,7 +6,7 @@ This is a free library for ivector-based Speaker Recognition (Verification), whi
 ```
 mkdir build; cd build; cmake ..
 ```
-The input is preferably raw data without normalization from wav(bitspersample: 16bits and sample rate 16K).
+The input is preferably raw data without normalization from wav (bitspersample 16bits and sample rate 16K).
 More detailed information about usage of FreeSR can be referred to [speaker_recognizer.h]()
 
 [Example use]()
