@@ -14,7 +14,7 @@ More detailed information about usage of FreeSR can be referred to [speaker_reco
 ## Notes
 Now Only Supported in Windows. It is compiled by VS2013/Release.
 
-When use VS2013, maybe you need to change the line wrap format of three header files in [include](/include/speaker_recognizer.h) to Windows from UNIX,
+When use VS2013, maybe you need to change the line wrap format of three header files in [include](/include/) to Windows from UNIX,
 
 ## TODO
 + GMM-UBM
