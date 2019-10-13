@@ -16,5 +16,6 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib/)
 link_libraries(freesr)
 
 # Example
-add_executable(freesr-example example/freesr-example.cc)
-
+add_executable(freesr-ubm-example example/freesr-ubm-example.cc)
+add_executable(freesr-ivector-example example/freesr-ivector-example.cc)
+add_executable(freesr-gender-example example/freesr-gender-example.cc)

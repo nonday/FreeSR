@@ -9,6 +9,7 @@
 
 #include <Eigen/Core>
 
+
 #define PI 3.14159265359
 
 
@@ -24,6 +25,5 @@ typedef struct Plda_ {
 	Eigen::MatrixXd w;
 	Eigen::MatrixXd m;
 } Plda;
-
 
 #endif  // COMMON_H_
