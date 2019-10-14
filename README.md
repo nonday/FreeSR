@@ -31,6 +31,3 @@ When use VS2013, maybe you need to change the line wrap format of header files i
 The sample english.wav obtained from [python_speech_features](https://github.com/jameslyons/python_speech_features).
 The english.pcm is raw data from english.wav
 
-## Author
-+ Xulg, xulg.ai@qq.com
-
