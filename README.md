@@ -18,7 +18,7 @@ In addition, Gender Recognition is also implemented by GMM-UBM.
 ## Notes
 Now Only Supported in Windows. It is compiled by VS2013/Release/32bit.
 
-When use VS2013, maybe you need to change the line wrap format of three header files in [include](/include/) to Windows from UNIX,
+When use VS2013, maybe you need to change the line wrap format of header files in [include](/include/) to Windows from UNIX,
 
 ## TODO
 + Android
