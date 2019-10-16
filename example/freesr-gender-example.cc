@@ -40,7 +40,7 @@ int main(int argc, char** argv)
 		return -1;
 	}
 	
-	std::cout << "Rgistered model total["<< spk.GetCountSpeakers() << "] ..." << std::endl;
+	std::cout << "Registered model total["<< spk.GetCountSpeakers() << "] ..." << std::endl;
 	
 	// 1.Raw data
 	std::string rec = spk.RecognizeSpeaker(signal);

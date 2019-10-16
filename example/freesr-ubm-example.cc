@@ -51,12 +51,12 @@ int main(int argc, char** argv)
 	std::cout << "Recognize Result: " << rec << "  Score: " << spk.GetScore()<< std::endl;;
 
 	// remove
-	std::cout << "Rgistered Speaker total["<< spk.GetCountSpeakers() << "] ..." << std::endl;
+	std::cout << "Registered Speaker total["<< spk.GetCountSpeakers() << "] ..." << std::endl;
 	if(spk.RemoveSpeakerByIndex(0))
 	{
 		std::cout << "Remove speaker id["<< 0 << "] ..." << std::endl;
 	}
-	std::cout << "Rgistered Speaker total["<< spk.GetCountSpeakers() << "] ..." << std::endl;
+	std::cout << "Registered Speaker total["<< spk.GetCountSpeakers() << "] ..." << std::endl;
 	
 	
 	// 2.Audio file
@@ -70,7 +70,7 @@ int main(int argc, char** argv)
 	rec = spk.RecognizeSpeaker("english.wav");
 	std::cout << "Recognize Result: " << rec << "  Score: " << spk.GetScore() << std::endl;;
 
-	std::cout << "Rgistered Speaker total["<< spk.GetCountSpeakers() << "] ..." << std::endl;
+	std::cout << "Registered Speaker total["<< spk.GetCountSpeakers() << "] ..." << std::endl;
 
 	return 0;
 }

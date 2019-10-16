@@ -11,7 +11,6 @@
 #define DLL_API __declspec(dllimport)  
 #endif
 
-
 #include <string>
 #include <vector>
 
@@ -34,6 +33,8 @@ private:
 
 
 protected:
+	// number of non silence frames
+	int num_non_sil_frames_;
 	// sample rate
 	int sample_rate_;
 	// speech feature
@@ -48,8 +49,20 @@ protected:
 protected:
 	// 提取语音特征
 	// signal：PCM data，非归一化数据
-	// return：feat特征，ndim x nframes
+	// return：vad前的feat特征，ndim x nframes
 	Eigen::MatrixXd ExtractSpeechFeat(std::vector<double> signal);
+
+	// 根据VAD结果对特征帧进行筛选
+	// feat：特征，ndim x nframes
+	// index：非silence帧的帧索引
+	// return：vad后的feat特征，ndim x nframes
+	Eigen::MatrixXd VadSpeechFeat(Eigen::MatrixXd feat, std::vector<int> index);
+
+	// 读取音频文件，单通道，16K
+	// fpath：音频文件路径
+	// return：音频文件的raw data
+	std::vector<double> ReadAudioFile(std::string fpath);
+
 
 public:
 	// 获取已注册speaker名称

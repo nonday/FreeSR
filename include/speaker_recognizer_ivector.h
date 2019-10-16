@@ -82,6 +82,8 @@ public:
 private:
 	// 提取IVector
 	Eigen::MatrixXd ExtractIVector(std::vector<double> signal);
+	// 提取IVector
+	Eigen::MatrixXd ExtractIVector(Eigen::MatrixXd feat);
 
 private:
 

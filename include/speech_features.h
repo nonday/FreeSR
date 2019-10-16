@@ -1,8 +1,9 @@
 // 
 // Copyright (C) 2019, Xulg. All rights reserved.
 // 
-// xulg <xulg.ai@qq.com>
-// 
+// <xulg.ai@qq.com>
+// 2019/8/21
+//
 
 #ifndef SPEECH_FEATURES_H_
 #define SPEECH_FEATURES_H_
@@ -24,14 +25,11 @@ public:
 					int cep_lifter = 22, int num_cep=13,
 					int win_type = -1);
 	
-	
 	~SpeechFeatures();
 
 private:
-
 	SpeechFeatures(const SpeechFeatures &);
 	SpeechFeatures & operator=(const SpeechFeatures &);
-
 
 
 public:
@@ -50,17 +48,20 @@ public:
 	Eigen::MatrixXd Delta(Eigen::MatrixXd feat,int N);
 
 	// Voice Activity Detection
-	Eigen::VectorXi Vad(std::vector<double> signal, double vad_energy_threshold = 1000,
-		double vad_energy_mean_scale = 0.2,
-		int vad_frames_context = 5,
-		double vad_proportion_threshold = 0.8);
+	Eigen::VectorXi Vad(std::vector<double> signal, double energy_threshold = 1000,
+		double energy_mean_scale = 0.2,
+		int frames_context = 5,
+		double proportion_threshold = 0.8);
 
+	// Voice Activity Detection
+	// 返回vad后非静音帧的index
+	std::vector<int> VadIndex(std::vector<double> signal, double energy_threshold = 1000,
+		double energy_mean_scale = 0.2,
+		int frames_context = 5,
+		double proportion_threshold = 0.8);
 
 private:
 
-	
-
-	
 	// convert a value in Hertz to Mels.
 	double Hz2mel(double hz);
 	// convert a value in Mels to Hertz.
@@ -97,12 +98,10 @@ private:
 	// the number of cepstrum to return, default 13
 	int num_cep_;
 
-	
 	// apply a window function such as the Hamming window to each frame.
 	int window_funciton_type_;
 
 	
-
 	Eigen::MatrixXd fbank_;
 	Eigen::VectorXd energy_;
 
