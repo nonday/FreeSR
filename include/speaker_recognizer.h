@@ -8,7 +8,9 @@
 #define SPEAKER_RECOGNIZER_H_
 
 #if defined(_WIN32)
-#define DLL_API __declspec(dllimport)  
+#define DLL_API __declspec(dllimport)
+#elif
+#define DLL_API
 #endif
 
 #include <string>
