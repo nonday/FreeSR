@@ -3,9 +3,14 @@ This is a free library for Speaker Recognition (Verification), which is complete
 
 Simultaneously, you can extract speech features by FreeSR such as mfcc, fbank etc. More detailed information can be referred to [python_speech_features](https://github.com/jameslyons/python_speech_features). Most of implementations are similar between them, only in different language.
 
-## Supported algorithms
-+ I-Vector
-+ GMM-UBM
+## Supported Platform
+
+|                | Windows (win32)  | Linux (X64) | Android      |
+|----------------|----------------|-------------|--------------|
+|                | >=VS2013       | --          |  --          |
+|   I-Vector     | *              | --          |  --          |
+|   GMM-UBM      | *              | --          |  --          |
+
 
 ## Usage
 ```
@@ -21,8 +26,6 @@ Now Only Supported in Windows. It is compiled by VS2013/Release/32bit. The debug
 
 When use VS2013, maybe you need to change the line wrap format of header files in [include](/include/) to Windows from UNIX,
 
-## TODO
-+ Android
 
 ## Dependency
 + [Eigen3](http://eigen.tuxfamily.org/index.php?title=Main_Page)
