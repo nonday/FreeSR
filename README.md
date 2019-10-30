@@ -8,8 +8,8 @@ Simultaneously, you can extract speech features by FreeSR such as mfcc, fbank et
 |                | Windows (win32)  | Linux (X64) | Android      |
 |----------------|----------------|-------------|--------------|
 |                | >=VS2013       | --          |  --          |
-|   I-Vector     | *              | --          |  --          |
-|   GMM-UBM      | *              | --          |  --          |
+|   I-Vector     | *              | --          |  *          |
+|   GMM-UBM      | *              | --          |  *          |
 
 
 ## Usage
@@ -22,7 +22,9 @@ More detailed information about usage of FreeSR can be referred to [speaker_reco
 [Example](/example/)
 
 ## Notes
-Now Only Supported in Windows. It is compiled by VS2013/Release/32bit. The debug version can be found [here](https://share.weiyun.com/5prBEuQ).
+For Windows, it is compiled by VS2013/Release/32bit. The debug version can be found [here](https://share.weiyun.com/5prBEuQ).
+
+For Android, the so library can be found [here](https://share.weiyun.com/5O9BdLP).
 
 When use VS2013, maybe you need to change the line wrap format of header files in [include](/include/) to Windows from UNIX,
 
