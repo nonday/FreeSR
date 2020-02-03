@@ -5,11 +5,11 @@ Simultaneously, you can extract speech features by FreeSR such as mfcc, fbank et
 
 ## Supported Platform
 
-|                | Windows (win32)  | Linux (X64) | Android      |
-|----------------|----------------|-------------|--------------|
-|                | >=VS2013       | --          |  --          |
-|   I-Vector     | *              | --          |  *          |
-|   GMM-UBM      | *              | --          |  *          |
+|                | Windows (win32) | Linux (X64) | Android      |
+|----------------|-----------------|-------------|--------------|
+|                | >=VS2013        | gcc>=4.9.4  |  --          |
+|   I-Vector     | *               | *           |  *           |
+|   GMM-UBM      | *               | *           |  *           |
 
 
 ## Usage
