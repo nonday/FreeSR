@@ -8,8 +8,8 @@ Simultaneously, you can extract speech features by FreeSR such as mfcc, fbank et
 |                | Windows (win32) | Linux (X64) | Android      |
 |----------------|-----------------|-------------|--------------|
 |                | >=VS2013        | gcc>=4.9.4  |  --          |
-|   I-Vector     | *               | *           |  *           |
-|   GMM-UBM      | *               | *           |  *           |
+|   I-Vector     | &#10004;        | &#10004;    |  &#10004;    |
+|   GMM-UBM      | &#10004;        | &#10004;    |  &#10004;    |
 
 
 ## Usage
