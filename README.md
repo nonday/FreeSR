@@ -3,13 +3,21 @@ This is a free library for Speaker Recognition (Verification), which is complete
 
 Simultaneously, you can extract speech features by FreeSR such as mfcc, fbank etc. More detailed information can be referred to [python_speech_features](https://github.com/jameslyons/python_speech_features). Most of implementations are similar between them, only in different language.
 
-## Supported Platform
+## Speaker Recognition
 
 |                | Windows (win32) | Linux (X64) | Android      |
 |----------------|-----------------|-------------|--------------|
 |                | >=VS2013        | gcc>=4.9.4  |  --          |
 |   GMM-UBM      | &#10004;        | &#10004;    |  &#10004;    |
 |   i-vector     | &#10004;        | &#10004;    |  &#10004;    |
+|   x-vector     | --        |--    |  --    |
+
+## Speaker Gender Recognition
+
+|                | Windows (win32) | Linux (X64) | Android      |
+|----------------|-----------------|-------------|--------------|
+|                | >=VS2013        | gcc>=4.9.4  |  --          |
+|   GMM-UBM      | &#10004;        | &#10004;    |  &#10004;    |
 |   x-vector     | --        |--    |  --    |
 
 
