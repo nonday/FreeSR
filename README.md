@@ -15,7 +15,7 @@ This is a free library for Speaker Recognition (Verification), which is complete
 |                | Windows (X64/Release) | Linux (X64) | Android      |
 |----------------|-----------------|-------------|--------------|
 |                | >=VS2015        | --    |  --    |
-|   GMM-UBM      | &#10004;        | --    |  ==    |
+|   GMM-UBM      | &#10004;        | --    |  --    |
 |   x-vector     | &#10004;        | --    |  --    |
 
 
