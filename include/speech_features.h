@@ -1,8 +1,7 @@
 // 
-// Copyright (C) 2019, Xulg. All rights reserved.
+// Copyright (C) 2019-2020, Xulg. All rights reserved.
 // 
-// <xulg.ai@qq.com>
-// 2019/8/21
+// xulg <xulg.ai@qq.com>
 //
 
 #ifndef SPEECH_FEATURES_H_
@@ -48,7 +47,8 @@ public:
 	Eigen::MatrixXd Delta(Eigen::MatrixXd feat,int N);
 
 	// Voice Activity Detection
-	Eigen::VectorXi Vad(std::vector<double> signal, double energy_threshold = 1000,
+	// 返回vad后非静音的signal
+	std::vector<double> VadSignal(std::vector<double> signal, double energy_threshold = 1000,
 		double energy_mean_scale = 0.2,
 		int frames_context = 5,
 		double proportion_threshold = 0.8);

@@ -1,5 +1,5 @@
-// 
-// Copyright (C) 2019, Xulg. All rights reserved.
+//
+// Copyright (C) 2019-2020, Xulg. All rights reserved.
 // 
 // xulg <xulg.ai@qq.com>
 // 
@@ -7,10 +7,16 @@
 #ifndef SPEAKER_RECOGNIZER_H_
 #define SPEAKER_RECOGNIZER_H_
 
-#if defined(_WIN32)
-#define DLL_API __declspec(dllimport)
-#elif
-#define DLL_API
+#if defined(_MSC_VER)
+//	#define FREESR_EXPORT 1
+	#ifdef FREESR_EXPORT
+		#define DLL_API __declspec(dllexport)  
+	#else
+		#define DLL_API __declspec(dllimport)  
+	#endif
+	
+#else
+	#define DLL_API
 #endif
 
 #include <string>
@@ -49,16 +55,11 @@ protected:
 	std::vector<std::string> reg_speakers_;
 
 protected:
-	// 提取语音特征
+	// 提取语音特征 TODO...
 	// signal：PCM data，非归一化数据
-	// return：vad前的feat特征，ndim x nframes
-	Eigen::MatrixXd ExtractSpeechFeat(std::vector<double> signal);
-
-	// 根据VAD结果对特征帧进行筛选
-	// feat：特征，ndim x nframes
-	// index：非silence帧的帧索引
-	// return：vad后的feat特征，ndim x nframes
-	Eigen::MatrixXd VadSpeechFeat(Eigen::MatrixXd feat, std::vector<int> index);
+	// vad_model: 不同的vad处理方式，0/1/2
+	// return：mfcc特征，ndim x nframes
+	Eigen::MatrixXd ExtractSpeechFeat(std::vector<double> signal, int vad_model = 0);
 
 	// 读取音频文件，单通道，16K
 	// fpath：音频文件路径

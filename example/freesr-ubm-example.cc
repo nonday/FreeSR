@@ -1,4 +1,4 @@
-// Example for FreeSR
+// gmm-ubm example for FreeSR
 
 #include <stdio.h>
 
@@ -9,10 +9,9 @@
 
 int main(int argc, char** argv)
 {
-
 	// smaple rate
 	int sr = 8000;
-	// raw data
+	// signal data
 	std::vector<double> signal;
 
 	FILE* fp = fopen("english.pcm", "rb");
@@ -30,47 +29,39 @@ int main(int argc, char** argv)
 		fclose(fp);
 		fp = NULL;
 	}
-	std::cout << "Signal length: "<< signal.size() << std::endl;
 
-	SpeakerRecognizerGMM spk(sr);	
+
+	SpeakerRecognizerGMM spk(sr);
 	bool ret = spk.Init("freesr-ubm-model.bin");
 	if (!ret)
 	{
-		std::cout << "Failed to Init ..." << std::endl;
+		std::cout << "Failed to init ..." << std::endl;
 		return -1;
 	}
-		
-	// 1.Raw data
-	ret = spk.RegisterSpeaker(signal, "english", "english.model");
+
+	ret = spk.RegisterSpeaker(signal, "english", "english.gmm");
 	if (!ret)
 	{
 		std::cout << "Failed to Register ..." << std::endl;
 		return -1;
 	}
-	std::string rec = spk.RecognizeSpeaker(signal);
-	std::cout << "Recognize Result: " << rec << "  Score: " << spk.GetScore()<< std::endl;;
 
-	// remove
-	std::cout << "Registered Speaker total["<< spk.GetCountSpeakers() << "] ..." << std::endl;
-	if(spk.RemoveSpeakerByIndex(0))
-	{
-		std::cout << "Remove speaker id["<< 0 << "] ..." << std::endl;
-	}
-	std::cout << "Registered Speaker total["<< spk.GetCountSpeakers() << "] ..." << std::endl;
-	
-	
-	// 2.Audio file
-	std::vector<std::string> fpaths = {"english.wav"};
-	ret = spk.RegisterSpeaker(fpaths, "english", "english.model");
+	std::vector<std::string> fpaths = {"english.wav", "english.wav"};
+	ret = spk.RegisterSpeaker(fpaths, "english_file", "english_file.gmm");
 	if (!ret)
 	{
 		std::cout << "Failed to Register ..." << std::endl;
 		return -1;
 	}
-	rec = spk.RecognizeSpeaker("english.wav");
-	std::cout << "Recognize Result: " << rec << "  Score: " << spk.GetScore() << std::endl;;
 
-	std::cout << "Registered Speaker total["<< spk.GetCountSpeakers() << "] ..." << std::endl;
+
+	std::cout << "Recognize Speaker by raw data ..." << std::endl;
+	std::string rec1 = spk.RecognizeSpeaker(signal);
+	std::cout << "Recognize Result: " << rec1 << "  Score: " << spk.GetScore() << std::endl;
+
+	std::cout << "Recognize Speaker by audio file ..." << std::endl;
+	std::string rec2 = spk.RecognizeSpeaker("english.wav");
+	std::cout << "Recognize Result: " << rec2 << "  Score: " << spk.GetScore() << std::endl;
 
 	return 0;
 }
