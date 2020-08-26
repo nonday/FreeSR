@@ -1,14 +1,14 @@
 # FreeSR: A Free Library for Speaker Recognition
-This is a free library for Speaker Recognition (Verification), which is completely implemented in C/C++. In addition, Speaker Gender Recognition is also implemented.
+This is a free library for Speaker Recognition (Verification), which is completely implemented in C/C++ by [ncnn](https://github.com/Tencent/ncnn). In addition, Speaker Gender Recognition is also implemented.
+We also provide a example for java.
 
 ## FreeSR
 
 |                | Windows (X64/Release) | Linux (X64) | Android      |
 |----------------|-----------------|-------------|--------------|
 |                | >=VS2015        | --    |  --    |
-|Speaker Recognition(Verification)| &#10004;        | --    |  &#10004;    |
-|Speaker Gender Recognition | &#10004;        | --    |  &#10004;    |
-
+|Speaker Recognition(Verification)| &#10004;        | --    |  --    |
+|Speaker Gender Recognition | &#10004;        | --    |  --    |
 
 ## Usage
 ```
@@ -20,10 +20,7 @@ More detailed information about usage of FreeSR can be referred to [speaker_reco
 [Example](/example/)
 
 ## Notes
-For Windows, it is compiled by VS2015/X64/Release. When use VS, maybe you need to change the line wrap format of header files in [include](/include/) to Windows from UNIX,
-
-## Dependency
-+ [ncnn](https://github.com/Tencent/ncnn)
+For Windows, it is compiled by VS2015/X64/Release. When use VS, maybe you need to change the line wrap format of header files in [include](/include/) to Windows from UNIX.
 
 ## Reference
 The sample english.wav obtained from [python_speech_features](https://github.com/jameslyons/python_speech_features).
