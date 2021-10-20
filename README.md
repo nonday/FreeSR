@@ -15,12 +15,6 @@ We also provide a example for java.
 mkdir build; cd build; cmake.exe .. -G"Visual Studio 14 Win64"
 ```
 The input is preferably raw data without normalization from wav (single channel, bitspersample 16bits and sample rate 16K).
-More detailed information about usage of FreeSR can be referred to [speaker_recognizer.h](/include/speaker_recognizer.h).
+More detailed information about usage of FreeSR can be referred to [speaker_recognizer.h](/freesr-cpp/include/speaker_recognizer.h).
 
-[Example](/example/)
-
-## Notes
-For Windows, it is compiled by VS2015/X64/Release. When use VS, maybe you need to change the line wrap format of header files in [include](/include/) to Windows from UNIX.
-
-## Reference
-The sample english.wav obtained from [python_speech_features](https://github.com/jameslyons/python_speech_features).
+[Example](/freesr-cpp/example/)
