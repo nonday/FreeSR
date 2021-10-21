@@ -6,9 +6,9 @@ We also provide a example for java.
 
 |                | Windows (X64/Release) | Linux (X64) | Android      |
 |----------------|-----------------|-------------|--------------|
-|                | >=VS2015        | --    |  --    |
-|Speaker Recognition(Verification)| &#10004;        | --    |  --    |
-|Speaker Gender Recognition | &#10004;        | --    |  --    |
+|                | >=VS2015        | g++7.5.0   |  --    |
+|Speaker Recognition(Verification)| &#10004;| &#10004; |  --    |
+|Speaker Gender Recognition | &#10004; | &#10004;  |  --    |
 
 ## Usage
 ```
