@@ -18,3 +18,11 @@ The input is preferably raw data without normalization from wav (single channel,
 More detailed information about usage of FreeSR can be referred to [speaker_recognizer.h](/freesr-cpp/include/speaker_recognizer.h).
 
 [Example](/freesr-cpp/example/)
+
+## Performance
+
+|  Platform  | Input Length   | Time(ms)    | Library Size | 1:N      |
+|------------|----------------|-------------|--------------|----------|
+|  Win10 i7-8700 CPU @ 3.20GHz    |   4s@16KHz      |      5.22MB(dll)    |  1:100000    |
+
+
