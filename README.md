@@ -23,6 +23,6 @@ More detailed information about usage of FreeSR can be referred to [speaker_reco
 
 |  Platform  | Input Length   | Time(ms)    | Library Size | 1:N      |
 |------------|----------------|-------------|--------------|----------|
-|  Win10 i7-8700 CPU @ 3.20GHz    |   4s@16KHz      |      5.22MB(dll)    |  1:100000    |
+|  Win10 i7-8700 CPU @ 3.20GHz    |   4s@16KHz | --     |      5.22MB(dll)    |  1:100000    |
 
 
